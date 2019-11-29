@@ -1,0 +1,16 @@
+language: bash
+
+before_deploy:
+ - mkdir -p public
+ - mv *.geojson ./public
+
+deploy:
+  provider: pages
+  local_dir: public
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
+notifications:
+  webhooks: https://www.travisbuddy.com
