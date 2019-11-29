@@ -63,3 +63,7 @@ typings/
 # Shapes
 *.shp
 *.dbf
+
+# Continuous Integration test tasks
+test-deploy.sh
+test-reset.sh
